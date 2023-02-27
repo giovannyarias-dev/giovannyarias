@@ -10,7 +10,7 @@ const TimeBar: React.FC<Props> = ({ jobs }) => {
 
   return (
     <div>
-      { jobs[0].company.name }
+      Company name
     </div>
   )
 }
