@@ -1,5 +1,5 @@
 import { ICompany } from "./company";
-import { IProject } from "./Project";
+import { IProject } from "./project";
 
 export interface IJob {
   id: string;
