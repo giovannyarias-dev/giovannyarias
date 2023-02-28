@@ -6,6 +6,6 @@
  body {
   padding: 0;
   margin: 0;
-  height: 100vh; /* fallback for Js load */
-  height: var(--doc-height);
+  height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100);
  }
