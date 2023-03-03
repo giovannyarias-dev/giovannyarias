@@ -2,7 +2,7 @@
 import { IJob } from '@/app/model/job';
 import dayjs from 'dayjs';
 import { useEffect, useState } from 'react';
-import { DurationStyled, JobStyled, TimeBarStyled, YearStyled } from './TimeBar.styled'
+import { JobStyled, TimeBarStyled, YearStyled } from './TimeBar.styled'
 
 const YEAR_HEIGHT = 50;
 const DAY_HEIGHT = YEAR_HEIGHT / 365;
