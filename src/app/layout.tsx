@@ -1,3 +1,5 @@
+
+import CvNavbar from './components/CvNavbar/CvNavbar'
 import './globals.css'
 
 export const metadata = {
@@ -12,7 +14,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <CvNavbar />
+        {children}
+      </body>
     </html>
   )
 }
