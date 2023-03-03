@@ -2,14 +2,10 @@
 import { IJob } from '@/app/model/job';
 import dayjs from 'dayjs';
 import { useEffect, useState } from 'react';
-import { DurationStyled, TimeBarStyled, YearStyled } from './TimeBar.styled'
+import { DurationStyled, JobStyled, TimeBarStyled, YearStyled } from './TimeBar.styled'
 
 const YEAR_HEIGHT = 50;
 const DAY_HEIGHT = YEAR_HEIGHT / 365;
-
-type Props = {
-  jobs: any[]
-}
 
 const getYears = (jobs: IJob[]) => {
   const max = new Date().getFullYear()
@@ -36,6 +32,10 @@ const getDurationMargin = (job: IJob) => {
   return daysDifference * DAY_HEIGHT;
 }
 
+type Props = {
+  jobs: any[]
+}
+
 const TimeBar: React.FC<Props> = ({ jobs }) => {
 
   const [years, setYears] = useState<number[]>([]);
@@ -56,12 +56,20 @@ const TimeBar: React.FC<Props> = ({ jobs }) => {
       </div>
       <div className='duration-grid'>
         {jobs.map(job => (
-          <DurationStyled 
+          <JobStyled 
             color={job.company.color} 
             key={job.id}
             height={getDurationHeight(job)}
             margin={getDurationMargin(job)}
-          />
+          >
+            <div className="duration"></div>
+            <div className='job'>
+              {job.name}
+              <div className='company'>
+                {job.company.name}
+              </div>
+            </div>
+          </JobStyled>
         ))}
       </div>
     </TimeBarStyled>

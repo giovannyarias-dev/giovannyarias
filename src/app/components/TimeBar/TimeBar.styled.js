@@ -42,11 +42,27 @@ export const YearStyled = styled.div`
   }
 `;
 
-export const DurationStyled = styled.div`
-  background-color: ${props => props.color};
+export const JobStyled = styled.div`
   height: ${props => props.height}px;
-  width: 12px;
-  color: 20px;
+  width: 100%;
   position: absolute;
   margin-top: ${props => props.margin}px;
+  display: flex;
+
+  .duration {
+    width: 12px;
+    background-color: ${props => props.color};
+    display: flex;
+    height: 100%;
+  }
+
+  .job {
+    padding-left: 24px;
+    color: #fff;
+  }
+
+  .company {
+    font-weight: bold;
+    font-size: 12px;
+  }
 `;
