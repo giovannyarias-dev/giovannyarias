@@ -47,10 +47,10 @@ export const JobStyled = styled.div`
   position: absolute;
   margin-top: ${props => props.margin}px;
   display: flex;
-  margin-left: 100%;
+  opacity: 0;
 
-  animation-duration: 2s;
-  animation-delay: ${props => props.order * 0.5}s;
+  animation-duration: 1.5s;
+  animation-delay: ${props => props.order * 0.3}s;
   animation-name: slideFromTop;
   animation-fill-mode: forwards;
 
@@ -74,11 +74,13 @@ export const JobStyled = styled.div`
 
   @keyframes slideFromTop {
   from {
-    margin-left: 100%;
+    margin-left: 60%;
+    opacity: 0;
   }
 
   to {
     margin-left: 0%;
+    opacity: 1;
   }
 }
 `;
