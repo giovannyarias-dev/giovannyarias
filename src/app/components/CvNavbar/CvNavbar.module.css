@@ -1,5 +1,6 @@
 .container {
   position: fixed;
+  display: flex;
   align-items: center;
   justify-content: center;
   width: 70%;
@@ -7,4 +8,8 @@
   background-color: #000;
   border-radius: 30px;
   bottom: 20px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  color: #fff;
 }
