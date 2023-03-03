@@ -8,149 +8,19 @@ export const metadata = {
 }
 
 async function getJobs() {
-  // [const res = await fetch('http://127.0.0.1:3001/api/jobs')
-  // if (!res.ok) {
-  //   throw new Error('Failed to fetch data');
-  // }
-  // return res.json();]
+  const res = await fetch('http://127.0.0.1:3001/api/jobs')
+  if (!res.ok) {
+    throw new Error('Failed to fetch data');
+  }
+  return res.json();
 }
 
 const CV = async () => {
 
-  // const jobs = await getJobs()
-  const jobs: IJob[] = [];
+  const jobs = await getJobs()
 
   return (
     <div className={styles.container}>
-      <TimeBar jobs={jobs}></TimeBar>
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
-      Esto es una prueba <br />
     </div>
   )
 }
