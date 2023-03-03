@@ -24,8 +24,9 @@ const CV = async () => {
   return (
     <div className={styles.container}>
       Professional Experience
-      
-      <TimeBar jobs={jobs.filter((job: any) => job.company)} />
+      <div className={styles.timeBarContainer}>
+        <TimeBar jobs={jobs.filter((job: any) => job.company)} />
+      </div>
     </div>
   )
 }

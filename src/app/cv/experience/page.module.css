@@ -1,3 +1,7 @@
 .container {
   background-color: #237ed9;
 } 
+
+.timeBarContainer {
+  padding: 16px 16px 100px 16px;
+}

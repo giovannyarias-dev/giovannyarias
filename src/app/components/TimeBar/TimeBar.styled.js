@@ -44,7 +44,6 @@ export const YearStyled = styled.div`
 
 export const JobStyled = styled.div`
   height: ${props => props.height}px;
-  width: 100%;
   position: absolute;
   margin-top: ${props => props.margin}px;
   display: flex;
