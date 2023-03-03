@@ -229,7 +229,7 @@ export const jobsMock = [
   {
       "id": "9dc3d7cd-1fb5-4cce-9f17-672d545fe0b0",
       "name": "Analyst",
-      "startDate": "2014-01-01",
+      "startDate": "2010-06-05",
       "endDate": "2015-07-10",
       "projects": [],
       "company": {

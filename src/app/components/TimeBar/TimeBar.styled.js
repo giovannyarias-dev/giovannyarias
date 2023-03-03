@@ -11,20 +11,27 @@ export const TimeBarStyled = styled.div`
     align-items: flex-end;
   }
 
-  .year {
+  .duration-grid {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-    color: #ffffff82;
-    position: relative;
-    cursor: pointer;
+    flex-direction: column;
+    width: 12px;
+    background-color: #458acf;
+  }
+`;
 
-    &:hover {
-      color: #fff;
-    }
-  } 
+export const YearStyled = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: ${props => props.height}px;
+  color: #ffffff82;
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    color: #fff;
+  }
 
   .divider {
     border-top: 1px solid #fff;
@@ -33,18 +40,13 @@ export const TimeBarStyled = styled.div`
     right: 0;
     top: 0;
   }
-
-  .duration-grid {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .duration {
-    background-color: #000;
-    height: 40px;
-    width: 12px;
-    color: 20px;
-  }
-
 `;
 
+export const DurationStyled = styled.div`
+  background-color: ${props => props.color};
+  height: ${props => props.height}px;
+  width: 12px;
+  color: 20px;
+  position: absolute;
+  margin-top: ${props => props.margin}px;
+`;
