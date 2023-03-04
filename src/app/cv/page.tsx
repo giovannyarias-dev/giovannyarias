@@ -1,4 +1,3 @@
-import TimeBar from '../components/TimeBar/TimeBar'
 import { IJob } from '../../model/job'
 import styles from './page.module.css'
 
