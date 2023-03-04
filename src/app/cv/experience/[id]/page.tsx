@@ -18,7 +18,7 @@ const Job = async ({ params }: { params: {id: string}}) => {
 
   return (
     <div className={styles.sidebar}>
-      <h1>{ job.name }</h1>
+      <h1>{ job?.name }</h1>
       <h2>{ job?.company?.name }</h2>
       <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
       <div>Prueba</div>
