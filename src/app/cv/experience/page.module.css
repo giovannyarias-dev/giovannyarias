@@ -4,6 +4,7 @@
 
 .timeBarContainer {
   position: absolute;
+  width: calc(100% - 32px);
   padding: 80px 16px 100px 16px;
 }
 
