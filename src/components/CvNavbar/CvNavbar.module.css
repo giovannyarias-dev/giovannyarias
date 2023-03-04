@@ -1,15 +1,18 @@
 .container {
   position: fixed;
   display: flex;
+  z-index: 100;
   align-items: center;
   justify-content: center;
-  width: 70%;
-  height: 60px;
   background-color: #1a6bbd;
-  border-radius: 30px;
+  border-radius: 50px;
   bottom: 20px;
   left: 0;
   right: 0;
   margin: auto;
   color: #fff;
+  gap: 16px;
+  padding: 8px 24px;
+  justify-content: end;
+  width: fit-content;
 }

@@ -1,5 +1,5 @@
-import TimeBar from '@/app/components/TimeBar/TimeBar';
-import { IJob } from '@/app/model/job';
+import { IJob } from '@/model/job';
+import TimeBar from '@/components/TimeBar/TimeBar';
 import { jobsMock } from './jobs.mock';
 import styles from './page.module.css'
 
@@ -14,6 +14,7 @@ async function getJobs() {
   //   throw new Error('Failed to fetch data');
   // }
   // return res.json();
+  console.log('entra a consultar');
   return jobsMock;
 }
 
@@ -25,7 +26,7 @@ const CV = async () => {
     <div className={styles.container}>
       Professional Experience
       <div className={styles.timeBarContainer}>
-        <TimeBar jobs={jobs.filter((job: any) => job.company)} />
+        <TimeBar jobs={jobs.filter((job: any) => job.company)}  />
       </div>
     </div>
   )

@@ -1,5 +1,5 @@
 "use client";
-import { IJob } from '@/app/model/job';
+import { IJob } from '@/model/job';
 import dayjs from 'dayjs';
 import { useEffect, useState } from 'react';
 import { JobStyled, TimeBarStyled, YearStyled } from './TimeBar.styled'
