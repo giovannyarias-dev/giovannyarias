@@ -57,10 +57,9 @@ const TimeBar: React.FC<Props> = ({ jobs }) => {
       </div>
       <div className='duration-grid'>
         {jobs.map((job, index) => (
-          <Link href={`/cv/experience/${ job.id }`}>
+          <Link href={`/cv/experience/${ job.id }`} key={job.id}>
             <JobStyled 
-              color={job.company.color} 
-              key={job.id}
+              color={job.company.color}
               height={getDurationHeight(job)}
               margin={getDurationMargin(job)}
               order={index+1}
