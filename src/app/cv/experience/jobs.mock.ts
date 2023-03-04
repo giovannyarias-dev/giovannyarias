@@ -188,7 +188,7 @@ export const jobsMock = [
       "id": "cbd7feac-27d9-4c90-9ce6-7c0b1a4cd00c",
       "name": "Senior Developer",
       "startDate": "2019-05-02",
-      "endDate": "2021-05-03",
+      "endDate": "2021-03-07",
       "projects": [],
       "company": {
           "id": 4,

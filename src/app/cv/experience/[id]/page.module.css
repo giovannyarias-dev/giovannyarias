@@ -1,0 +1,26 @@
+.sidebar {
+  background-color: #fff;
+  position: fixed;
+  z-index: 50;
+  width: 100vw;
+  height: 100vh;
+  left: 79px;
+  padding: 80px 16px;
+  overflow-y: auto;
+
+  animation-name: slideFromRight;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideFromRight {
+  from {
+    margin-left: 60%;
+    opacity: 0;
+  }
+
+  to {
+    margin-left: 0%;
+    opacity: 1;
+  }
+}

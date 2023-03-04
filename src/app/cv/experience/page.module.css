@@ -3,5 +3,16 @@
 } 
 
 .timeBarContainer {
-  padding: 16px 16px 100px 16px;
+  position: absolute;
+  width: 100%;
+  padding: 80px 16px 100px 16px;
+}
+
+.title {
+  padding: 16px;
+  color: #fff;
+  background-color: #1a6bbd;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
 }

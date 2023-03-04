@@ -1,6 +1,7 @@
 "use client";
 import { IJob } from '@/model/job';
 import dayjs from 'dayjs';
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { JobStyled, TimeBarStyled, YearStyled } from './TimeBar.styled'
 
@@ -56,21 +57,23 @@ const TimeBar: React.FC<Props> = ({ jobs }) => {
       </div>
       <div className='duration-grid'>
         {jobs.map((job, index) => (
-          <JobStyled 
-            color={job.company.color} 
-            key={job.id}
-            height={getDurationHeight(job)}
-            margin={getDurationMargin(job)}
-            order={index+1}
-          >
-            <div className="duration"></div>
-            <div className='job'>
-              {job.name}
-              <div className='company'>
-                {job.company.name}
+          <Link href={`/cv/experience/${ job.id }`}>
+            <JobStyled 
+              color={job.company.color} 
+              key={job.id}
+              height={getDurationHeight(job)}
+              margin={getDurationMargin(job)}
+              order={index+1}
+            >
+              <div className="duration" />
+              <div className='job'>
+                {job.name}
+                <div className='company'>
+                  {job.company.name}
+                </div>
               </div>
-            </div>
-          </JobStyled>
+            </JobStyled>
+          </Link>
         ))}
       </div>
     </TimeBarStyled>

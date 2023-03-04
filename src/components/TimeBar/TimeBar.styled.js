@@ -48,13 +48,13 @@ export const JobStyled = styled.div`
   margin-top: ${props => props.margin}px;
   display: flex;
   opacity: 0;
+  min-width: 300px;
 
   animation-duration: 1.5s;
   animation-delay: ${props => props.order * 0.3}s;
   animation-name: slideFromTop;
   animation-fill-mode: forwards;
-
-
+  
   .duration {
     width: 12px;
     background-color: ${props => props.color};
