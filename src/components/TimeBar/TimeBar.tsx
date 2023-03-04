@@ -43,7 +43,7 @@ const TimeBar: React.FC<Props> = ({ jobs }) => {
 
   useEffect(() => {
     setYears(getYears(jobs));
-  }, []);
+  }, [jobs]);
   
   return (
     <TimeBarStyled>
