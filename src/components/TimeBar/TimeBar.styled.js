@@ -9,6 +9,7 @@ export const TimeBarStyled = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    z-index: 2;
   }
 
   .duration-grid {
@@ -22,10 +23,9 @@ export const TimeBarStyled = styled.div`
 export const YearStyled = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
   width: 50px;
   height: ${props => props.height}px;
-  color: #ffffff82;
+  color: #ffffff40;
   position: relative;
   cursor: pointer;
 
@@ -60,6 +60,12 @@ export const JobStyled = styled.div`
     background-color: ${props => props.color};
     display: flex;
     height: 100%;
+
+    &.active {
+      animation-duration: 0.3s;
+      animation-name: slideFromRight;
+      animation-fill-mode: forwards;
+    }
   }
 
   .job {
@@ -73,14 +79,28 @@ export const JobStyled = styled.div`
   }
 
   @keyframes slideFromTop {
-  from {
-    margin-left: 60%;
-    opacity: 0;
+    from {
+      margin-left: 60%;
+      opacity: 0;
+    }
+
+    to {
+      margin-left: 0%;
+      opacity: 1;
+    }
   }
 
-  to {
-    margin-left: 0%;
-    opacity: 1;
+  @keyframes slideFromRight {
+    from {
+      width: 12px;
+      margin-left: 0;
+    }
+
+    to {
+      width: 20px;
+      margin-left: -8px;
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+    }  
   }
-}
 `;

@@ -5,12 +5,32 @@
   width: 100vw;
   height: 100vh;
   left: 79px;
-  padding: 80px 16px;
   overflow-y: auto;
 
   animation-name: slideFromRight;
   animation-duration: 1s;
   animation-fill-mode: forwards;
+}
+
+.jobLanding {
+  display: flex;
+  padding: 16px;
+  color: #fff;
+  flex-direction: column;
+}
+
+.jobName {
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+.jobDate {
+  font-size: 14px;
+}
+
+.companyLogo {
+  width: 120px;
+  margin-bottom: 16px;
 }
 
 @keyframes slideFromRight {

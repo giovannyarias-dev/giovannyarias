@@ -18,11 +18,15 @@ const Job = async ({ params }: { params: {id: string}}) => {
 
   return (
     <div className={styles.sidebar}>
-      <h1>{ job?.name }</h1>
-      <h2>{ job?.company?.name }</h2>
-      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-      <div>Prueba</div>
-      <div>Prueba</div><div>Prueba</div><div>Prueba</div><div>Prueba</div><div>Prueba</div><div>Prueba</div><div>Prueba</div><div>Prueba</div><div>Prueba</div><div>Prueba</div><div>Prueba</div><div>Prueba</div><div>Prueba</div><div>Prueba</div><div>Prueba</div><div>Prueba</div><div>Prueba</div><div>Prueba</div><div>Prueba</div><div>Prueba</div><div>Prueba</div><div>Prueba</div><div>Prueba</div><div>Prueba</div><div>Prueba</div><div>Prueba</div><div>Prueba</div><div>Prueba</div><div>Prueba</div><div>Prueba</div><div>Prueba</div><div>Prueba</div><div>Prueba</div><div>Prueba</div><div>Prueba</div><div>Prueba</div><div>Prueba</div><div>Prueba</div><div>Prueba</div><div>Prueba</div><div>Prueba</div><div>Prueba</div><div>Prueba</div><div>Prueba</div><div>Prueba</div>
+      <div className={styles.jobLanding} style={{ backgroundColor: job?.company?.color}}>
+        <img src={job?.company?.urlImage || ''} className={styles.companyLogo}></img>
+        <div className={styles.jobName}>
+          { job?.name }
+        </div>
+        <div className={styles.jobDate}>
+          ({ job?.startDate } - { job?.endDate ? `${job?.endDate}`: 'Today' })
+        </div>
+      </div>
     </div>
   )
 }

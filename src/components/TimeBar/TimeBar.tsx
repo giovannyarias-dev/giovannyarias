@@ -2,6 +2,7 @@
 import { IJob } from '@/model/job';
 import dayjs from 'dayjs';
 import Link from 'next/link';
+import { useSelectedLayoutSegment } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { JobStyled, TimeBarStyled, YearStyled } from './TimeBar.styled'
 
@@ -39,7 +40,8 @@ type Props = {
 
 const TimeBar: React.FC<Props> = ({ jobs }) => {
 
-  const [years, setYears] = useState<number[]>([]);
+  const [years, setYears] = useState<number[]>([])
+  const activeSegment = useSelectedLayoutSegment()
 
   useEffect(() => {
     setYears(getYears(jobs));
@@ -64,7 +66,7 @@ const TimeBar: React.FC<Props> = ({ jobs }) => {
               margin={getDurationMargin(job)}
               order={index+1}
             >
-              <div className="duration" />
+              <div className={`duration ${activeSegment === job.id? 'active': ''}`} />
               <div className='job'>
                 {job.name}
                 <div className='company'>
