@@ -44,8 +44,8 @@ function App() {
 
   return (
     <>
-      <svg width="400" height="200">
-        <g transform="scale(10 10)">
+      <svg width="300">
+        <g transform="scale(7.5 7.5)">
           <motion.path fill={fill} d={framePath} />
           <motion.path fill={'#242424'} d={lensPath} />
           <motion.path fill={fill} d={rightFramePath} />
